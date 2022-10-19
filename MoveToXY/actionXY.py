@@ -1,14 +1,15 @@
-from tools import * 
+import math
 
-set_x = 4
-set_y = 4
+set_x = 2
+set_y = 2
 
-target_x = 2
-target_y = 2
+target_x = 4
+target_y = 4
 
-set_xy = {"x":set_x,"y":set_y}
-target_xy = {"x":target_x,"y":target_y}
+set_xy = [set_x,set_y]
+target_xy = [target_y,target_x]
 
-set = Point(set_xy)
-target = Point(target_xy)
+def coordianates(set1,set2 : list) -> int :
+  return math.sqrt((abs(set1[0] - set2[0])**2) + (abs(set1[1] - set2[1])**2))
 
+print(coordianates(target_xy,set_xy))
