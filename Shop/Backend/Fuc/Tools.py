@@ -11,8 +11,10 @@ class Manage :
     self.db_raw = str(data['db_raw']).split(",")
 
 class Sql(Manage) :
+  def __init__(self) -> None:
+    print("1223123")
   def Create(self):
-    db = 
+    print("123","<---- here")
     
     
 class Server :

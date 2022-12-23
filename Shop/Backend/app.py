@@ -1,12 +1,13 @@
-target = ["id","name","age"]
-table = "db"
-def create(table,target):
-  cmd = f'select'
-  for i in target :
-    if i == target[len(target)-1] :
-     cmd = cmd + f',{i} from {table};'
-    else : 
-      cmd = cmd + f' {i},'
-  return cmd
+class Func1 :
+  def __init__(self,data) -> None:
+    self.box1 = data 
 
-print(create(table,target))
+class Func2(Func1) :
+  def __init__(self) -> None:
+    self.db = self.box1
+
+
+func1 = Func1("kaw")
+func2 = Func2()
+print(func1.box1)
+print(func2.db)
