@@ -6,10 +6,8 @@ def PageMain():
 
 @app.route('/create_db')
 def PageCreateDB():
-  x = (Manage(request.args))
-  print(x.db_name)
-  print(x.db_target)
-  
+  Manage(request.args)
+  Sql.Create()
   return 'ok'
 
 if __name__ == '__main__':
