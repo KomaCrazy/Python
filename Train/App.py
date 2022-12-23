@@ -1,2 +1,8 @@
+
 from tools import *
-Settings("1",3,3,4,)
+
+@app.route('/')
+def page0():
+  return '0'
+
+Run()
