@@ -10,11 +10,11 @@ def PageMain():
    return Server.Error("PageMain",e)
 
 @app.route("/find")
-def PageFind():
+async def PageFind():
  try:
-   print("<Here")
-   Manage(request.args)
+   await Sql(Manage(request.args))
    return '0'
+ 
  except Exception as e :
    return Server.Error("PageFind",e)
    

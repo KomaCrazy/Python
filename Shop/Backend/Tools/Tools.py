@@ -14,20 +14,18 @@ class Manage:
   def __init__(self,table) -> None:
     self.table = table["table"]
     self.field = table["field"]
-    print(self.table)
-    print(self.field)
-        
-        
 
-
+class Sql(Manage):
+  def       
+    
 
 class Server :
   def Run():
       app.run('0.0.0.0',5000)
   
-  def StatusOK(page):
-    return jsonify({f'{page}':f'OK'})
   
   def Error(page,err):
-    return jsonify({f'{page}':f'{err}'})  
+    callback = jsonify({f'{page}':f'{err}'})
+    print(callback)
+    return callback
   # def Reset():
